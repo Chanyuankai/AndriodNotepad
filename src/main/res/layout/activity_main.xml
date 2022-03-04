@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/b"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp">
+
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="62dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic" />
+
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="7dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/add"
+            android:onClick="click"
+            android:text="添加" />
+
+        <Button
+            android:id="@+id/recycle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/recycle"
+            android:onClick="click"
+            android:text="回收站" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableTop="@drawable/search"
+            android:onClick="click"
+            android:text="查询" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="记事本内容："
+        android:textColor="#050505"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableTop="@drawable/ca"
+            android:onClick="selectdate"
+            android:text="选择查看时间" />
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableTop="@drawable/go"
+            android:onClick="searchyByDate"
+            android:text="查看" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/king"
+            android:text="按照种类查看"
+            android:textColor="#050505" />
+
+        <Spinner
+            android:id="@+id/kindspinner"
+            android:layout_width="81dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="281dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView android:id="@+id/et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间显示"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview"/>
+</LinearLayout>
